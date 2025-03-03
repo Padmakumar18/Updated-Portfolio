@@ -1,7 +1,7 @@
 import React from 'react';
-import ParticleBackground from './ParticleBackground';
+import ParticleBackground from './Components/ParticleBackground';
 import './App.css';
-import Content from './Content';
+import Content from './Components/Content';
 
 function App() {
   return (

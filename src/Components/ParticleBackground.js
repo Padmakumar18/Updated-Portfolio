@@ -44,12 +44,12 @@ const ParticleBackground = () => {
     const init = () => {
       particlesArray.length = 0;
       for (let i = 0; i < numberOfParticles; i++) {
-        const size = Math.random() * 2 + 1;
+        const size = Math.random() + 1;
         const x = Math.random() * (canvas.width - size * 2) + size;
         const y = Math.random() * (canvas.height - size * 2) + size;
         const directionX = (Math.random() * 0.4) - 0.2;
         const directionY = (Math.random() * 0.4) - 0.2;
-        const color = '#ffffff';
+        const color = '#rgb(0, 0, 0)';
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
       }
     };
@@ -84,7 +84,7 @@ const ParticleBackground = () => {
         width: '100%',
         height: '100%',
         zIndex: -1,
-        background: 'linear-gradient(135deg,rgb(0, 0, 0),rgb(0, 0, 0))',
+        background: '#fff6e9',
       }}
     />
   );
