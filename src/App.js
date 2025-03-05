@@ -1,7 +1,8 @@
 import React from 'react';
 import ParticleBackground from './Components/ParticleBackground';
-import './App.css';
-import Content from './Components/Content';
+import './CSS/App.css';
+import Content from './Components/Profile';
+import Project from './Components/Project';
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
       <ParticleBackground />
       <div className="content">
         <Content/>
+      </div>
+      <div className="container">
+        <Project/>
       </div>
     </div>
   );
