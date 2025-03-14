@@ -8,3 +8,12 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+{/* <motion.img
+      src={myPhoto}
+      alt="Padma Kumar"
+      initial={{ x: "-100vw" }} 
+      animate={{ x: 0 }} 
+      transition={{ duration: 3, type: "spring" }}
+      className="MyPicture"
+    />  */}
