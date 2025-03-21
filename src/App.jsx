@@ -26,7 +26,7 @@ function App() {
   }, []);
   return (
     <>
-      <div className="container">
+      <div className="container w-screen">
         <div className="home flex items-center justify-center h-screen">
           <div className="details ">
             <p className="text-xlg md:text-lg lg:text-4xl name">Padma Kumar </p>
