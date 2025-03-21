@@ -1,0 +1,22 @@
+.skill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  }
+
+  li {
+    background-color: rgb(14, 32, 42);
+    width: 8em;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 0.3em 0.4em;
+    gap: 8px;
+    border-radius: 0.3em;
+  }
+
+  .mavenLogo,.hibernate,.mysql {
+    width: 2em;
+    height: 2em;
+  }
