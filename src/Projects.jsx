@@ -1,9 +1,5 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
 import "./Projects.css";
+import React, { useRef, useEffect, useState } from "react";
 
 import YT from "./projectImages/YTBookmark.webp";
 import ToDo from "./projectImages/To-Do.webp";
@@ -51,17 +47,44 @@ const Projects = () => {
       link: "https://todo-ease.web.app",
     },
   ];
+  const sliderRef = useRef(null);
+  const [scrollWidth, setScrollWidth] = useState(0);
+
+  useEffect(() => {
+    if (sliderRef.current) {
+      setScrollWidth(
+        sliderRef.current.scrollWidth - sliderRef.current.clientWidth
+      );
+    }
+  }, []);
+
+  const scrollLeft = () => {
+    if (sliderRef.current.scrollLeft === 0) {
+      sliderRef.current.scrollLeft = scrollWidth;
+    } else {
+      sliderRef.current.scrollLeft -= 300;
+    }
+  };
+
+  const scrollRight = () => {
+    if (sliderRef.current.scrollLeft >= scrollWidth) {
+      sliderRef.current.scrollLeft = 0;
+    } else {
+      sliderRef.current.scrollLeft += 300;
+    }
+  };
 
   return (
-    <div className="Projects mt-20 max-w-screen-lg mx-auto">
-      <p className="font-bold text-3xl flex items-center justify-center mb-10">
+    <div className="slider-container">
+      <p className="font-bold text-3xl mb-10 flex items-center justify-center">
         PROJECTS
       </p>
-
-      <div className="projectsList flex justify-center">
-        
-          {projects.map((project, index) => (
-            <div className="projectDiv text-center p-4 bg-gray-800 rounded-lg shadow-lg">
+      <button className="slider-btn prev" onClick={scrollLeft}>
+        &#10094;
+      </button>
+      <div className="slider" ref={sliderRef}>
+        {projects.map((project, index) => (
+          <div key={index} className="projectDiv text-center p-4 bg-gray-800 rounded-lg shadow-lg">
             <p className="text-white mb-2">{project.title}</p>
             <div className="projectImage">
               <img
@@ -70,9 +93,7 @@ const Projects = () => {
                 className="w-full YT h-auto rounded-lg"
               />
             </div>
-            <p className="text-white mt-2 mb-2 font-semibold">
-              {project.name}
-            </p>
+            <p className="text-white mt-2 mb-2 font-semibold">{project.name}</p>
             <div className="buttons flex justify-center gap-2">
               <button className="bg-blue-600 text-white rounded sourceCode">
                 <a href="#" target="_blank" rel="noopener noreferrer">
@@ -90,11 +111,13 @@ const Projects = () => {
               </button>
             </div>
           </div>
-          ))}
+        ))}
       </div>
+      <button className="slider-btn next" onClick={scrollRight}>
+        &#10095;
+      </button>
     </div>
   );
 };
 
 export default Projects;
- 

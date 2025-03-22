@@ -1,12 +1,13 @@
 import "./Expereince.css";
-import React, { useRef, useEffect, useState } from "react";
-const Expereince = () => {
-  
+import React from "react";
+
+const Slider = () => {
+
   return (
-    <div className="slider-container">
-      
+    <div className="">
+      <p>Exprience</p>
     </div>
   );
 };
 
-export default Expereince;
+export default Slider;

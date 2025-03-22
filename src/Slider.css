@@ -1,0 +1,56 @@
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Updated Slider.css */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 calc(100% / 3); /* Default for desktop */
+    min-width: calc(100% / 3);
+}
+
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+}
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; 
+    cursor: pointer;
+}
+
+.left-arrow {
+    left: 10px; 
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-button {
+    cursor: pointer;
+    padding: 10px;
+}

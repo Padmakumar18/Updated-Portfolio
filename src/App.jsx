@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import Slider from './Slider';
 import Expereince from "./Expereince";
 
 function App() {
@@ -56,17 +57,19 @@ function App() {
           </div>
         </div>
 
-        <Skills/>
-        <Expereince/>
+<Slider/>
+        <Skills />
 
-       <Projects/>
+        {/* <Expereince /> */}
+
+        {/* <Projects /> */}
 
         <div className="Contact mt-20">
-          <p className="font-bold text-white text-3xl">Tell's make a good API Call</p>
+          <p className="font-bold text-white text-3xl">
+            Tell's make a good API Call
+          </p>
 
-          <div className="contactList">
-            
-          </div>
+          <div className="contactList"></div>
         </div>
       </div>
     </>
