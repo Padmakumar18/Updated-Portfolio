@@ -7,6 +7,7 @@ import Flames from "./projectImages/Flames.webp";
 import Link2QR from "./projectImages/Link2QR.webp";
 import TicTacTeo from "./projectImages/Tic-Tac-Teo.webp";
 import ToDoList from "./projectImages/To-Do- List.webp";
+import Github from "./projectImages/github.webp";
 
 const Projects = () => {
   const projects = [
@@ -15,36 +16,56 @@ const Projects = () => {
       name: "YT Bookmark",
       img: YT,
       link: "",
+      sourceCode : "https://github.com/Padmakumar18/YT-Bookmark"
     },
     {
       title: "Chrome Extension",
       name: "TO-Do List",
       img: ToDo,
       link: "",
+      sourceCode : "https://github.com/Padmakumar18/YT-Bookmark"
     },
     {
       title: "Web Application",
       name: "Flames",
       img: Flames,
       link: "https://flames-algorithm.netlify.app/",
+      sourceCode : "https://github.com/Padmakumar18/Flames_web"
     },
     {
       title: "Web Application",
       name: "Link2QR",
       img: Link2QR,
       link: "https://link-2-qr.web.app",
+      sourceCode : "https://github.com/Padmakumar18/QR/tree/Dev"
     },
     {
       title: "Web Application",
       name: "Tic Tac Teo",
       img: TicTacTeo,
       link: "https://tic-tac-teo-ten.vercel.app",
+      sourceCode : "https://github.com/Padmakumar18/TIC-TAC-TEO-Web-app"
     },
     {
       title: "Web Application",
       name: "To Do List",
       img: ToDoList,
       link: "https://todo-ease.web.app",
+      sourceCode : "https://github.com/Padmakumar18/To-do/tree/main/to-dok"
+    },
+    {
+      title: "Console Application",
+      name: "Employee-Management",
+      img: Github,
+      link: "https://github.com/Padmakumar18/Employee-Management",
+      sourceCode : "https://github.com/Padmakumar18/Employee-Management"
+    },
+    {
+      title: "Console Application",
+      name: "Email Application",
+      img: Github,
+      link: "https://github.com/Padmakumar18/EmailApp",
+      sourceCode : "https://github.com/Padmakumar18/EmailApp"
     },
   ];
 
@@ -67,7 +88,7 @@ const Projects = () => {
             <p className="text-white mt-2 mb-2 font-semibold">{project.name}</p>
             <div className="buttons flex justify-center gap-2">
               <button className="bg-blue-600 text-white rounded sourceCode">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href={project.sourceCode} target="_blank" rel="noopener noreferrer">
                   Source code
                 </a>
               </button>
