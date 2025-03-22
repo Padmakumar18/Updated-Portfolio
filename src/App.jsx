@@ -5,14 +5,11 @@ import quotes from "./data/quotes";
 
 import "./App.css";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Projects from "./Projects";
 import Skills from "./Skills";
-import Slider from './Slider';
 import Expereince from "./Expereince";
 
 function App() {
@@ -57,12 +54,11 @@ function App() {
           </div>
         </div>
 
-<Slider/>
         <Skills />
 
-        {/* <Expereince /> */}
+        <Expereince />
 
-        {/* <Projects /> */}
+        <Projects />
 
         <div className="Contact mt-20">
           <p className="font-bold text-white text-3xl">

@@ -1,13 +1,15 @@
 import "./Expereince.css";
 import React from "react";
 
-const Slider = () => {
+const Expereince = () => {
 
   return (
-    <div className="">
-      <p>Exprience</p>
+    <div className="mt-10">
+      <p className="font-bold text-3xl mb-10 flex items-center justify-center">
+      EXPEREINCE
+      </p>
     </div>
   );
 };
 
-export default Slider;
+export default Expereince;

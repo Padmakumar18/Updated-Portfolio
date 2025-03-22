@@ -47,42 +47,13 @@ const Projects = () => {
       link: "https://todo-ease.web.app",
     },
   ];
-  const sliderRef = useRef(null);
-  const [scrollWidth, setScrollWidth] = useState(0);
-
-  useEffect(() => {
-    if (sliderRef.current) {
-      setScrollWidth(
-        sliderRef.current.scrollWidth - sliderRef.current.clientWidth
-      );
-    }
-  }, []);
-
-  const scrollLeft = () => {
-    if (sliderRef.current.scrollLeft === 0) {
-      sliderRef.current.scrollLeft = scrollWidth;
-    } else {
-      sliderRef.current.scrollLeft -= 300;
-    }
-  };
-
-  const scrollRight = () => {
-    if (sliderRef.current.scrollLeft >= scrollWidth) {
-      sliderRef.current.scrollLeft = 0;
-    } else {
-      sliderRef.current.scrollLeft += 300;
-    }
-  };
 
   return (
-    <div className="slider-container">
-      <p className="font-bold text-3xl mb-10 flex items-center justify-center">
+    <div className="">
+      <p className="font-bold text-3xl  mb-10 flex items-center justify-center">
         PROJECTS
       </p>
-      <button className="slider-btn prev" onClick={scrollLeft}>
-        &#10094;
-      </button>
-      <div className="slider" ref={sliderRef}>
+      <div className="slider" >
         {projects.map((project, index) => (
           <div key={index} className="projectDiv text-center p-4 bg-gray-800 rounded-lg shadow-lg">
             <p className="text-white mb-2">{project.title}</p>
@@ -113,9 +84,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <button className="slider-btn next" onClick={scrollRight}>
-        &#10095;
-      </button>
     </div>
   );
 };
