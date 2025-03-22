@@ -65,3 +65,37 @@
     right: 10px;
   }
   
+  .YT {
+    width: 10em;
+    height: 8em;
+  }
+  
+  .projectImage {
+    border: 1px solid white;
+    width: fit-content;
+    padding: 0.5em;
+    margin: 0 1em;
+  }
+  
+  .projectDiv {
+    border: 1px solid white;
+    width: fit-content;
+    border-radius: 0.7em;
+  }
+  
+  .sourceCode,
+  .tapToView {
+    font-size: 0.8em;
+    padding: 0.3em 0.7em;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .projectsList {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }

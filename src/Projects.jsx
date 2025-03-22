@@ -61,7 +61,35 @@ const Projects = () => {
       <div className="projectsList flex justify-center">
         
           {projects.map((project, index) => (
-            <div>{project.link} </div>
+            <div className="projectDiv text-center p-4 bg-gray-800 rounded-lg shadow-lg">
+            <p className="text-white mb-2">{project.title}</p>
+            <div className="projectImage">
+              <img
+                src={project.img}
+                alt={project.name}
+                className="w-full YT h-auto rounded-lg"
+              />
+            </div>
+            <p className="text-white mt-2 mb-2 font-semibold">
+              {project.name}
+            </p>
+            <div className="buttons flex justify-center gap-2">
+              <button className="bg-blue-600 text-white rounded sourceCode">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  Source code
+                </a>
+              </button>
+              <button className="bg-green-600 text-white rounded tapToView">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tap to view
+                </a>
+              </button>
+            </div>
+          </div>
           ))}
       </div>
     </div>
