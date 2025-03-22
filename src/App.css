@@ -7,7 +7,7 @@
   animation: bounce 3s infinite ease-in-out;
 }
 
-.container {
+.main {
   background-color: rgb(6, 6, 6);
   color: white;
   margin: 0;

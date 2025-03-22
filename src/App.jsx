@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import Expereince from "./Expereince";
 
 function App() {
   const [quote, setQuote] = useState({});
@@ -26,7 +27,7 @@ function App() {
   }, []);
   return (
     <>
-      <div className="container w-screen">
+      <div className="main w-screen">
         <div className="home flex items-center justify-center h-screen">
           <div className="details ">
             <p className="text-xlg md:text-lg lg:text-4xl name">Padma Kumar </p>
@@ -43,7 +44,7 @@ function App() {
             </button>
 
             <p className="text-lg mt-4">"{quote.quote}"</p>
-            <p className="text-lg float-right ">— {quote.author}</p>
+            <p className="text-lg float-right ">- {quote.author}</p>
           </div>
 
           <div className="picture">
@@ -56,6 +57,7 @@ function App() {
         </div>
 
         <Skills/>
+        <Expereince/>
 
        <Projects/>
 

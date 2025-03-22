@@ -1,4 +1,5 @@
-    .slider-container {
+  
+  .slider-container {
     width: 80%;
     position: relative;
     overflow: hidden;
@@ -31,6 +32,7 @@
     margin: 5px;
   }
   
+  /* Responsive Adjustments */
   @media (max-width: 768px) {
     .slide {
       flex: 0 0 50%;
@@ -43,6 +45,7 @@
     }
   }
   
+  /* Navigation Arrows */
   .slider-btn {
     position: absolute;
     top: 50%;
