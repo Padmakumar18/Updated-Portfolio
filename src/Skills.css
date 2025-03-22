@@ -1,7 +1,6 @@
 .skill {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1.5rem;
   }
   
@@ -27,7 +26,7 @@
   }
   
 
-  .mavenLogo,.hibernate,.mysql {
+  .mavenLogo,.hibernate,.mysql,.Postman {
     width: 2em;
     height: 2em;
   }
