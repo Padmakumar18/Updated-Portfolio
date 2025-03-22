@@ -20,8 +20,8 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-6 text-center">Experience</h2>
+    <div className="max-w-4xl mx-auto mt-10 p-6">
+      <h2 className="text-2xl font-bold mb-6 text-center">EXPERIENCE</h2>
       <div className="relative flex flex-col items-center">
         <div className="absolute w-1 bg-blue-500 h-full left-1/2 transform -translate-x-1/2"></div>
         {experiences.map((exp, index) => (

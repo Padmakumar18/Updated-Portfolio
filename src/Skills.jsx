@@ -6,11 +6,11 @@ export default function Skills() {
         <>
         <div className="skills flex items-center justify-center">
           <div className="skillsList">
-            <p className="font-bold text-3xl mb-10 flex items-center justify-center">
+            <p className="font-bold text-2xl mb-10 flex items-center justify-center">
               SKILLS
             </p>
             <ul>
-            <p className='text-lg mb-3'>Frontend</p>
+            <p className='text-lg mb-2'>Frontend</p>
               <div className="skill">
                 <li>
                   
@@ -167,7 +167,7 @@ export default function Skills() {
                   Svelte
                 </li>
               </div>
-              <p className='text-lg mt-5 mb-3'>Backend</p>
+              <p className='text-lg mt-3 mb-2'>Backend</p>
               <div className="skill">
                 <li>
                   {" "}
@@ -301,7 +301,7 @@ export default function Skills() {
                   Docker
                 </li>
               </div>
-              <p className='text-lg mt-5 mb-3'>Databases</p>
+              <p className='text-lg  mt-3 mb-2'>Databases</p>
               <div className="skill">
                 
 
@@ -371,7 +371,7 @@ export default function Skills() {
                   MongoDb
                 </li>
               </div>
-              <p className='text-lg mt-5 mb-3'>Tools & Platforms</p>
+              <p className='text-lg  mt-3 mb-2'>Tools & Platforms</p>
               <div className="skill">
                 <li>
                   <svg

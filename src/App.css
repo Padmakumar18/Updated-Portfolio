@@ -35,15 +35,12 @@
 
 .resumeButton {
   padding: 0.5em 1.5em;
-  color: black;
-  background-color: #6db79e;
   border-radius: 5px;
-  font-weight: bold;
   transition: transform 0.3s ease-in-out, background-color 0.3s;
+  border: 1px solid white;
 }
 
 .resumeButton:hover {
-  background-color: #58a38d;
   transform: scale(1.05);
 }
 

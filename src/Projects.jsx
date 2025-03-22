@@ -71,7 +71,7 @@ const Projects = () => {
 
   return (
     <div className="">
-      <p className="font-bold text-3xl  mb-10 flex items-center justify-center">
+      <p className="font-bold text-2xl  mb-10 flex items-center justify-center">
         PROJECTS
       </p>
       <div className="slider" >
@@ -87,12 +87,12 @@ const Projects = () => {
             </div>
             <p className="text-white mt-2 mb-2 font-semibold">{project.name}</p>
             <div className="buttons flex justify-center gap-2">
-              <button className="bg-blue-600 text-white rounded sourceCode">
+              <button className=" text-white rounded sourceCode">
                 <a href={project.sourceCode} target="_blank" rel="noopener noreferrer">
                   Source code
                 </a>
               </button>
-              <button className="bg-green-600 text-white rounded tapToView">
+              <button className=" text-white rounded tapToView">
                 <a
                   href={project.link}
                   target="_blank"
