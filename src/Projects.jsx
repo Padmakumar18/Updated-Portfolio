@@ -76,7 +76,7 @@ const Projects = () => {
       </p>
       <div className="slider" >
         {projects.map((project, index) => (
-          <div key={index} className="projectDiv text-center p-4 bg-gray-800 rounded-lg shadow-lg">
+          <div key={index} className="projectDiv text-center p-4 rounded-lg shadow-lg">
             <p className="text-white mb-2">{project.title}</p>
             <div className="projectImage">
               <img

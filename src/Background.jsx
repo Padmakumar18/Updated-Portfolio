@@ -1,134 +1,80 @@
-import React, { useEffect, useRef } from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
-const DarkAnimatedBackground = () => {
+const Background = () => {
   const canvasRef = useRef(null);
-  
+
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    
-    // Set canvas to full window size
+    const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    
-    // Particle system
-    const particles = [];
-    const particleCount = Math.floor(window.innerWidth * window.innerHeight / 10000);
-    const colors = ['#4a148c', '#7b1fa2', '#9c27b0', '#ba68c8', '#e1bee7'];
-    
-    // Particle class
+
+    let particles = [];
+
     class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 3 + 1;
-        this.color = colors[Math.floor(Math.random() * colors.length)];
-        this.speedX = Math.random() * 1 - 0.5;
-        this.speedY = Math.random() * 1 - 0.5;
-        this.opacity = Math.random() * 0.6 + 0.1;
+      constructor(x, y, radius, dx, dy) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.dx = dx;
+        this.dy = dy;
       }
-      
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        
-        // Bounce off edges
-        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-        
-        // Fade in/out effect
-        this.opacity += (Math.random() - 0.5) * 0.02;
-        this.opacity = Math.max(0.1, Math.min(0.7, this.opacity));
-      }
-      
+
       draw() {
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
-        ctx.globalAlpha = this.opacity;
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
         ctx.fill();
+        ctx.closePath();
       }
-    }
-    
-    // Create particles
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
-    }
-    
-    // Connection lines between particles
-    function connect() {
-      let opacity = 0;
-      for (let a = 0; a < particles.length; a++) {
-        for (let b = a; b < particles.length; b++) {
-          const distance = Math.sqrt(
-            Math.pow(particles[a].x - particles[b].x, 2) + 
-            Math.pow(particles[a].y - particles[b].y, 2)
-          );
-          
-          if (distance < 100) {
-            opacity = 1 - distance / 100;
-            ctx.strokeStyle = `rgba(156, 39, 176, ${opacity * 0.2})`;
-            ctx.lineWidth = 0.5;
-            ctx.beginPath();
-            ctx.moveTo(particles[a].x, particles[a].y);
-            ctx.lineTo(particles[b].x, particles[b].y);
-            ctx.stroke();
-          }
+
+      update() {
+        if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+          this.dx = -this.dx;
         }
+        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+          this.dy = -this.dy;
+        }
+        this.x += this.dx;
+        this.y += this.dy;
+        this.draw();
       }
     }
-    
-    // Animation loop
-    let animationFrameId;
+
+    function init() {
+      particles = [];
+      for (let i = 0; i < 100; i++) {
+        let radius = Math.random() * 2 + 0.5;
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height;
+        let dx = (Math.random() - 0.5) * 1.5;
+        let dy = (Math.random() - 0.5) * 1.5;
+        particles.push(new Particle(x, y, radius, dx, dy));
+      }
+    }
+
     function animate() {
+      requestAnimationFrame(animate);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Draw a subtle gradient overlay
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, 'rgba(26, 26, 40, 0.8)');
-      gradient.addColorStop(1, 'rgba(10, 10, 20, 0.9)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      
-      // Update and draw particles
-      for (let i = 0; i < particles.length; i++) {
-        particles[i].update();
-        particles[i].draw();
-      }
-      
-      connect();
-      animationFrameId = requestAnimationFrame(animate);
+      particles.forEach((particle) => particle.update());
     }
-    
+
+    init();
     animate();
-    
-    // Handle resize
-    const handleResize = () => {
+
+    window.addEventListener("resize", () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-    };
-    
-    window.addEventListener('resize', handleResize);
-    
-    // Cleanup
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(animationFrameId);
-    };
+      init();
+    });
   }, []);
-  
-  return <Canvas ref={canvasRef} />;
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+      <canvas ref={canvasRef} style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1, backgroundColor: "#121212" }} />
+    </motion.div>
+  );
 };
 
-const Canvas = styled.canvas`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(to bottom, #0a0a14, #1a1a28);
-`;
-
-export default DarkAnimatedBackground;
+export default Background;

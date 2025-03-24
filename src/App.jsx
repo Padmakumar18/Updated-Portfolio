@@ -31,9 +31,7 @@ function App() {
   }, []);
   return (
     <>
-    <Background
-    
-    />
+    <Background/>
       <div className="main w-screen">
         <div className="home flex items-center justify-center h-screen">
           <div className="details ">
