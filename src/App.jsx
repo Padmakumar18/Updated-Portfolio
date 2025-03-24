@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Expereince from "./Expereince";
+import Background from "./Background";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -18,7 +19,6 @@ import EmailIcon from "@mui/icons-material/Email";
 import RedditIcon from "@mui/icons-material/Reddit";
 
 function App() {
-  const LeetCode = "";
   const [quote, setQuote] = useState({});
 
   const generateQuote = () => {
@@ -31,6 +31,9 @@ function App() {
   }, []);
   return (
     <>
+    <Background
+    
+    />
       <div className="main w-screen">
         <div className="home flex items-center justify-center h-screen">
           <div className="details ">
