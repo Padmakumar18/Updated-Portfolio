@@ -1,73 +1,56 @@
-import { useState, useEffect } from "react";
-import myPhoto from "./assets/MyPicture.webp";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import quotes from "./data/quotes";
-
-import "./App.css";
 import React from "react";
+import "./App.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Expereince from "./Expereince";
 import Background from "./Background";
-
-
 import Contact from "./Contact";
+import Profile from "./Profile";
 
-function App() {
-  const [quote, setQuote] = useState({});
-
-  const generateQuote = () => {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    setQuote(quotes[randomIndex]);
+const NavBar = () => {
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
   };
 
-  useEffect(() => {
-    generateQuote();
-  }, []);
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white p-4 shadow-lg z-50">
+      <ul className="flex justify-center space-x-6">
+        <li><button onClick={() => scrollToSection("home")}>Home</button></li>
+        <li><button onClick={() => scrollToSection("contact")}>Contact</button></li>
+        <li><button onClick={() => scrollToSection("projects")}>Projects</button></li>
+        <li><button onClick={() => scrollToSection("skills")}>Skills</button></li>
+      </ul>
+    </nav>
+  );
+};
+
+function App() {
   return (
     <>
-    <Background/>
-      <div className="main w-screen">
-        <div className="home flex items-center justify-center h-screen">
-          <div className="details ">
-            <p className="text-xlg md:text-lg lg:text-4xl name">Padma Kumar </p>
-
-            <p className="text-lg mt-3">padmakumar23.dev@gmail.com</p>
-            <button className="text-lg mt-5 resumeButton rounded">
-              <a
-                href="https://drive.google.com/file/d/1SPi2P_IyWuxD9ugAFfQl34aCGpEq_qjq/view?usp=sharing"
-                target="_blank"
-                className="resumeAnchor"
-              >
-                Resume
-              </a>
-            </button>
-
-            <p className="text-lg mt-4">"{quote.quote}"</p>
-            <p className="text-lg float-right ">- {quote.author}</p>
-          </div>
-
-          <div className="picture">
-            <LazyLoadImage
-              src={myPhoto}
-              alt="Picture"
-              className="MyPicture transition-transform duration-300 hover:scale-110"
-            />
-          </div>
-        </div>
-
-        <Skills />
-
-        <Expereince />
-
-        <Projects />
-
-        <Contact/>
-
+      <NavBar />
+      <Background />
+      <div className="main w-screen mt-16">
+        <section id="home">
+          <Profile />
+        </section>
         
+        <section id="skills">
+          <Skills />
+        </section>
+        
+        <Expereince />
+        
+        <section id="projects">
+          <Projects />
+        </section>
+        
+        <section id="contact">
+          <Contact />
+        </section>
       </div>
     </>
   );
