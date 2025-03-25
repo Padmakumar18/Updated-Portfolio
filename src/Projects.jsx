@@ -8,6 +8,7 @@ import Link2QR from "./projectImages/Link2QR.webp";
 import TicTacTeo from "./projectImages/Tic-Tac-Teo.webp";
 import ToDoList from "./projectImages/To-Do- List.webp";
 import Github from "./projectImages/github.webp";
+import DictionaryExtension from "./projectImages/Dictionary-Extension.webp";
 
 const Projects = () => {
   const projects = [
@@ -23,7 +24,14 @@ const Projects = () => {
       name: "TO-Do List",
       img: ToDo,
       link: "",
-      sourceCode : "https://github.com/Padmakumar18/YT-Bookmark"
+      sourceCode : "https://github.com/Padmakumar18/To-Do-list-chrome-extension"
+    },
+    {
+      title: "Chrome Extension",
+      name: "Dictionary-Extension",
+      img: DictionaryExtension,
+      link: "",
+      sourceCode : "https://github.com/Padmakumar18/Dictionary-Extension"
     },
     {
       title: "Web Application",
