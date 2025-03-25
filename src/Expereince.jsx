@@ -7,7 +7,7 @@ const experiences = [
     role: "Java Tutor",
     company: "Grapinz Technology & Institution",
     duration: "Sep 2024 - Feb 2025",
-    description: "Mentored 100+ students in OOP, data structures, and algorithms, improving their academic performance."
+    description: "Mentored 50+ students in OOP, data structures, and algorithms, improving their academic performance."
   },
   {
     id: 1,
