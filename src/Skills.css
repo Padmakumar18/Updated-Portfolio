@@ -1,32 +1,31 @@
 .skill {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  }
-  
-  li {
-    background-color: rgb(14, 32, 42);
-    width: 8em;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.3em 0.4em;
-    gap: 8px;
-    border-radius: 0.3em;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: rgb(20, 45, 60);
-    
-  }
+  gap: 1rem;
+}
 
-  li:hover {
-    transform: scale(1.1);
-  }
-  
+li {
+  width: 8em;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em 0.4em;
+  gap: 8px;
+  border-radius: 0.3em;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  background-color: rgb(20, 45, 60);
+}
 
-  .mavenLogo,.hibernate,.mysql,.Postman {
-    width: 2em;
-    height: 2em;
-  }
+li:hover {
+  transform: scale(1.1);
+}
+
+.mavenLogo,
+.hibernate,
+.mysql,
+.Postman {
+  width: 2em;
+  height: 2em;
+}

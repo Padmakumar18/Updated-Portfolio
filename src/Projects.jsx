@@ -79,7 +79,7 @@ const Projects = () => {
 
   return (
     <div className="">
-      <p className="font-bold text-2xl  mb-10 flex items-center justify-center">
+      <p className="font-bold text-2xl mb-10 flex items-center justify-center">
         PROJECTS
       </p>
       <div className="slider" >

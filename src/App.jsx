@@ -16,15 +16,15 @@ const NavBar = () => {
 
   const scrollToSection = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    setMobileMenuOpen(false); // Close menu after clicking a link (for mobile)
+    setMobileMenuOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white p-4 shadow-lg z-50">
+    <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <span className="text-xl font-bold">My Portfolio</span>
+            <span className="text-xl font-bold">PK</span>
           </div>
           <div className="md:hidden">
             <button
@@ -35,20 +35,54 @@ const NavBar = () => {
             </button>
           </div>
           <ul className="hidden md:flex space-x-6">
-            <li><button onClick={() => scrollToSection("home")}>Home</button></li>
-            <li><button onClick={() => scrollToSection("contact")}>Contact</button></li>
-            <li><button onClick={() => scrollToSection("projects")}>Projects</button></li>
-            <li><button onClick={() => scrollToSection("skills")}>Skills</button></li>
+            <li>
+              <button onClick={() => scrollToSection("home")}>Home</button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection("contact")}>
+                Contact
+              </button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection("projects")}>
+                Projects
+              </button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection("expereince")}>
+                Expereince
+              </button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection("skills")}>Skills</button>
+            </li>
           </ul>
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-800 text-center py-4">
+        <div className="md:hidden text-center py-4">
           <ul className="flex flex-col space-y-4">
-            <li><button onClick={() => scrollToSection("home")}>Home</button></li>
-            <li><button onClick={() => scrollToSection("contact")}>Contact</button></li>
-            <li><button onClick={() => scrollToSection("projects")}>Projects</button></li>
-            <li><button onClick={() => scrollToSection("skills")}>Skills</button></li>
+            <li>
+              <button onClick={() => scrollToSection("home")}>Home</button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection("contact")}>
+                Contact
+              </button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection("projects")}>
+                Projects
+              </button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection("expereince")}>
+                Expereince
+              </button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection("skills")}>Skills</button>
+            </li>
           </ul>
         </div>
       )}
@@ -62,23 +96,20 @@ function App() {
       <NavBar />
       <Background />
       <div className="main w-screen mt-16 px-4 sm:px-6 lg:px-8">
-        <section id="home">
-          <Profile />
-        </section>
-        
-        <section id="skills">
-          <Skills />
-        </section>
-        
+        <section id="home"></section>
+        <Profile />
+
+        <section id="skills"></section>
+        <Skills />
+
+        <section id="expereince"></section>
         <Expereince />
-        
-        <section id="projects">
-          <Projects />
-        </section>
-        
-        <section id="contact">
-          <Contact />
-        </section>
+
+        <section id="projects"></section>
+        <Projects />
+
+        <section id="contact"></section>
+        <Contact />
       </div>
     </>
   );
