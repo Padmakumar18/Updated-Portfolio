@@ -16,8 +16,8 @@ export default function Profile() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen p-6 text-white">
-      <div className="text-center md:text-left md:w-1/2">
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen text-white">
+      <div className="text-center md:text-left">
         <p className="text-2xl md:text-3xl lg:text-5xl font-bold text-teal-400 Name">Padma Kumar</p>
         <p className="text-md md:text-lg mt-3">padmakumar23.dev@gmail.com</p>
         <button className="mt-5 px-6 py-2 resumeButton text-white font-semibold rounded-lg">

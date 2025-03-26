@@ -1,7 +1,24 @@
+.skills {
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.skillsList {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
 .skill {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 li {
@@ -22,6 +39,37 @@ li:hover {
   transform: scale(1.1);
 }
 
+p {
+  text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .skill {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  li {
+    width: 10em;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 1rem;
+  }
+  
+  .skillsList {
+    width: 100%;
+  }
+
+  li {
+    width: 100%;
+  }
+}
+
+
 .mavenLogo,
 .hibernate,
 .mysql,
@@ -29,3 +77,47 @@ li:hover {
   width: 2em;
   height: 2em;
 }
+
+
+/* import './Skills.css'
+import Postman from "./assets/Postman.webp";
+
+export default function Skills() {
+    return (
+        <>
+        <div className="skills flex items-center justify-center">
+          <div className="skillsList">
+            <p className="font-bold text-2xl mb-10 flex items-center justify-center">
+              SKILLS
+            </p>
+            <ul>
+            <p className='text-lg mb-2'>Frontend</p>
+              <div className="skill">
+              <li>SKILLS</li>
+              <li>SKILLS</li>
+              <li>SKILLS</li>
+              </div>
+            <p className='text-lg mb-2'>Backend</p>
+              <div className="skill">
+              <li>SKILLS</li>
+              <li>SKILLS</li>
+              <li>SKILLS</li>
+              </div>
+            <p className='text-lg mb-2'>DB</p>
+              <div className="skill">
+              <li>SKILLS</li>
+              <li>SKILLS</li>
+              <li>SKILLS</li>
+              </div>
+            <p className='text-lg mb-2'>CLOUD</p>
+              <div className="skill">
+              <li>SKILLS</li>
+              <li>SKILLS</li>
+              <li>SKILLS</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        </>
+    )
+} */
