@@ -6,13 +6,12 @@
 .skillsList {
   max-width: 800px;
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .skill {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
 }
 
@@ -39,11 +38,7 @@ li:hover {
   transform: scale(1.1);
 }
 
-p {
-  text-align: center;
-}
 
-/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
   .skill {
     flex-direction: column;
@@ -68,7 +63,6 @@ p {
     width: 100%;
   }
 }
-
 
 .mavenLogo,
 .hibernate,
