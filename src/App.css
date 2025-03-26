@@ -1,8 +1,4 @@
 .MyPicture {
-  width: 15em;
-  height: 15em;
-  border-radius: 50%;
-  object-fit: cover;
   filter: brightness(85%);
   animation: bounce 2s infinite ease-in-out;
 }
@@ -64,6 +60,9 @@
 }
 
 @media (max-width: 768px) {
+  .Name {
+    margin-top: 2em;
+  }
   .MyPicture {
     width: 12em;
     height: 12em;
