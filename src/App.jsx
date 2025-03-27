@@ -6,20 +6,22 @@ import "swiper/css/pagination";
 
 import Projects from "./Projects";
 import Skills from "./Skills";
-import Expereince from "./Expereince";
+import Experience from "./Experience"; 
 import Background from "./Background";
 import Contact from "./Contact";
 import Profile from "./Profile";
+import Loading from "./Loading";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const scrollToSection = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setMobileMenuOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white shadow-lg z-50 ">
+    <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -38,19 +40,13 @@ const NavBar = () => {
               <button onClick={() => scrollToSection("home")}>Home</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("contact")}>
-                Contact
-              </button>
+              <button onClick={() => scrollToSection("contact")}>Contact</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("projects")}>
-                Projects
-              </button>
+              <button onClick={() => scrollToSection("projects")}>Projects</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("expereince")}>
-                Expereince
-              </button>
+              <button onClick={() => scrollToSection("experience")}>Experience</button>
             </li>
             <li>
               <button onClick={() => scrollToSection("skills")}>Skills</button>
@@ -65,19 +61,13 @@ const NavBar = () => {
               <button onClick={() => scrollToSection("home")}>Home</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("contact")}>
-                Contact
-              </button>
+              <button onClick={() => scrollToSection("contact")}>Contact</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("projects")}>
-                Projects
-              </button>
+              <button onClick={() => scrollToSection("projects")}>Projects</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("expereince")}>
-                Expereince
-              </button>
+              <button onClick={() => scrollToSection("experience")}>Experience</button>
             </li>
             <li>
               <button onClick={() => scrollToSection("skills")}>Skills</button>
@@ -90,26 +80,48 @@ const NavBar = () => {
 };
 
 function App() {
+  const [loadPage, setLoadPage] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadPage(false);
+    }, 2000);
+  }, []);
+
   return (
     <>
-      <NavBar />
-      <Background />
-      <div className="main w-screen mt-16 px-4 sm:px-6 lg:px-8">
-        <section id="home"></section>
-        <Profile />
+      {loadPage ? (
+        
+        <div className="Loading">
+          <Loading />
+        </div>
+      ) : (
+        <>
+          <NavBar />
+          <Background />
+          <div className="main w-screen mt-16 px-4 sm:px-6 lg:px-8">
+            <section id="home">
+              <Profile />
+            </section>
 
-        <section id="skills"></section>
-        <Skills />
+            <section id="skills">
+              <Skills />
+            </section>
 
-        <section id="expereince"></section>
-        <Expereince />
+            <section id="experience">
+              <Experience />
+            </section>
 
-        <section id="projects"></section>
-        <Projects />
+            <section id="projects">
+              <Projects />
+            </section>
 
-        <section id="contact"></section>
-        <Contact />
-      </div>
+            <section id="contact">
+              <Contact />
+            </section>
+          </div>
+        </>
+      )}
     </>
   );
 }
