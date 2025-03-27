@@ -31,7 +31,7 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <span className="text-xl font-bold">PK</span>
+            <span className="text-xl text-white font-bold">PK</span>
           </div>
           <div className="md:hidden">
             <button
@@ -42,22 +42,22 @@ const NavBar = () => {
             </button>
           </div>
           <ul className="hidden md:flex space-x-6">
-            <li><button onClick={() => scrollToSection("home")}>Home</button></li>
-            <li><button onClick={() => scrollToSection("contact")}>Contact</button></li>
-            <li><button onClick={() => scrollToSection("projects")}>Projects</button></li>
-            <li><button onClick={() => scrollToSection("experience")}>Experience</button></li>
-            <li><button onClick={() => scrollToSection("skills")}>Skills</button></li>
+            <li className="nav-li"><button className="text-black" onClick={() => scrollToSection("home")}>Home</button></li>
+            <li className="nav-li"><button className="text-black" onClick={() => scrollToSection("contact")}>Contact</button></li>
+            <li className="nav-li"><button className="text-black" onClick={() => scrollToSection("projects")}>Projects</button></li>
+            <li className="nav-li"><button className="text-black" onClick={() => scrollToSection("experience")}>Experience</button></li>
+            <li className="nav-li"><button className="text-black" onClick={() => scrollToSection("skills")}>Skills</button></li>
           </ul>
         </div>
       </div>
       {isMobileMenuOpen && (
         <div className="md:hidden text-center py-4">
           <ul className="flex flex-col space-y-4">
-            <li><button onClick={() => scrollToSection("home")}>Home</button></li>
-            <li><button onClick={() => scrollToSection("contact")}>Contact</button></li>
-            <li><button onClick={() => scrollToSection("projects")}>Projects</button></li>
-            <li><button onClick={() => scrollToSection("experience")}>Experience</button></li>
-            <li><button onClick={() => scrollToSection("skills")}>Skills</button></li>
+            <li className="nav-li"><button className="text-black"  onClick={() => scrollToSection("home")}>Home</button></li>
+            <li className="nav-li"><button className="text-black"  onClick={() => scrollToSection("contact")}>Contact</button></li>
+            <li className="nav-li"><button className="text-black"  onClick={() => scrollToSection("projects")}>Projects</button></li>
+            <li className="nav-li"><button className="text-black"  onClick={() => scrollToSection("experience")}>Experience</button></li>
+            <li className="nav-li"  ><button className="text-black"  onClick={() => scrollToSection("skills")}>Skills</button></li>
           </ul>
         </div>
       )}

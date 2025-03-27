@@ -2,8 +2,13 @@ html {
   scroll-behavior: smooth;
 }
 
+.nav-li {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  font-weight: 600;
+}
 .navbar {
- background-color: rgb(20, 45, 60);
+ background-color: #121212;
 }
 
 .MyPicture {
@@ -12,7 +17,6 @@ html {
 }
 
 .main {
-  /* background-color: rgb(6, 6, 6); */
   color: white;
   margin: 0;
   padding: 0;
