@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "./App.css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -6,7 +7,7 @@ import "swiper/css/pagination";
 
 import Projects from "./Projects";
 import Skills from "./Skills";
-import Experience from "./Experience"; 
+import Experience from "./Experience";
 import Background from "./Background";
 import Contact from "./Contact";
 import Profile from "./Profile";
@@ -21,7 +22,12 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white shadow-lg z-50">
+    <motion.nav
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 w-full navbar text-white shadow-lg z-50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -36,46 +42,41 @@ const NavBar = () => {
             </button>
           </div>
           <ul className="hidden md:flex space-x-6">
-            <li>
-              <button onClick={() => scrollToSection("home")}>Home</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection("contact")}>Contact</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection("projects")}>Projects</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection("experience")}>Experience</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection("skills")}>Skills</button>
-            </li>
+            <li><button onClick={() => scrollToSection("home")}>Home</button></li>
+            <li><button onClick={() => scrollToSection("contact")}>Contact</button></li>
+            <li><button onClick={() => scrollToSection("projects")}>Projects</button></li>
+            <li><button onClick={() => scrollToSection("experience")}>Experience</button></li>
+            <li><button onClick={() => scrollToSection("skills")}>Skills</button></li>
           </ul>
         </div>
       </div>
       {isMobileMenuOpen && (
         <div className="md:hidden text-center py-4">
           <ul className="flex flex-col space-y-4">
-            <li>
-              <button onClick={() => scrollToSection("home")}>Home</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection("contact")}>Contact</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection("projects")}>Projects</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection("experience")}>Experience</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection("skills")}>Skills</button>
-            </li>
+            <li><button onClick={() => scrollToSection("home")}>Home</button></li>
+            <li><button onClick={() => scrollToSection("contact")}>Contact</button></li>
+            <li><button onClick={() => scrollToSection("projects")}>Projects</button></li>
+            <li><button onClick={() => scrollToSection("experience")}>Experience</button></li>
+            <li><button onClick={() => scrollToSection("skills")}>Skills</button></li>
           </ul>
         </div>
       )}
-    </nav>
+    </motion.nav>
+  );
+};
+
+const FadeUpSection = ({ children, id }) => {
+  return (
+    <motion.section
+      id={id}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="py-10"
+    >
+      {children}
+    </motion.section>
   );
 };
 
@@ -91,7 +92,6 @@ function App() {
   return (
     <>
       {loadPage ? (
-        
         <div className="Loading">
           <Loading />
         </div>
@@ -100,25 +100,25 @@ function App() {
           <NavBar />
           <Background />
           <div className="main w-screen mt-16 px-4 sm:px-6 lg:px-8">
-            <section id="home">
+            <FadeUpSection id="home">
               <Profile />
-            </section>
+            </FadeUpSection>
 
-            <section id="skills">
+            <FadeUpSection id="skills">
               <Skills />
-            </section>
+            </FadeUpSection>
 
-            <section id="experience">
+            <FadeUpSection id="experience">
               <Experience />
-            </section>
+            </FadeUpSection>
 
-            <section id="projects">
+            <FadeUpSection id="projects">
               <Projects />
-            </section>
-
-            <section id="contact">
-              <Contact />
-            </section>
+            </FadeUpSection>
+            
+            <FadeUpSection id="contact">
+            </FadeUpSection>
+            <Contact />
           </div>
         </>
       )}

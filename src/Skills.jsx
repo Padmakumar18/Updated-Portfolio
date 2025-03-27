@@ -386,7 +386,7 @@ export default function Skills() {
               </li>
             </div>
             <p className="text-lg  mt-3 mb-2">Tools & Platforms</p>
-            <div className="skill mb-10">
+            <div className="skill">
               <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
