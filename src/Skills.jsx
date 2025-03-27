@@ -1,5 +1,6 @@
 import "./Skills.css";
 import Postman from "./assets/Postman.webp";
+import Notion from "./assets/Notion.webp";
 
 export default function Skills() {
   return (
@@ -622,6 +623,10 @@ export default function Skills() {
               <li>
                 <img src={Postman} alt="Postman" className="Postman" />
                 Postman
+              </li>
+              <li>
+                <img src={Notion} alt="Notion" className="notion" />
+                Notion
               </li>
             </div>
           </ul>
