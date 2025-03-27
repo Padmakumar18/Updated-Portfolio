@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,7 +13,6 @@ import Profile from "./Profile";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const scrollToSection = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     setMobileMenuOpen(false);
