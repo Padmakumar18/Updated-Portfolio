@@ -8,6 +8,7 @@ import Link2QR from "./projectImages/Link2QR.webp";
 import TicTacTeo from "./projectImages/Tic-Tac-Teo.webp";
 import ToDoList from "./projectImages/To-Do- List.webp";
 import Github from "./projectImages/github.webp";
+import ChatApp from "./projectImages/Chat-App.webp";
 import DictionaryExtension from "./projectImages/Dictionary-Extension.webp";
 
 const Projects = () => {
@@ -67,6 +68,13 @@ const Projects = () => {
       img: Github,
       link: "https://github.com/Padmakumar18/Employee-Management",
       sourceCode : "https://github.com/Padmakumar18/Employee-Management"
+    },
+    {
+      title: "Web Application",
+      name: "Chat Application",
+      img: ChatApp,
+      link: "https://github.com/Padmakumar18/Chat-Application/tree/main",
+      sourceCode : "https://github.com/Padmakumar18/Chat-Application/tree/main"
     },
     {
       title: "Console Application",
