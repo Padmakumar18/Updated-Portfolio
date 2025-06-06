@@ -10,29 +10,16 @@ import ToDoList from "./projectImages/To-Do- List.webp";
 import Github from "./projectImages/github.webp";
 import ChatApp from "./projectImages/Chat-App.webp";
 import DictionaryExtension from "./projectImages/Dictionary-Extension.webp";
+import Finance from "./projectImages/Finance.webp";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Chrome Extension",
-      name: "YT Bookmark",
-      img: YT,
-      link: "",
-      sourceCode : "https://github.com/Padmakumar18/YT-Bookmark"
-    },
-    {
-      title: "Chrome Extension",
-      name: "TO-Do List",
-      img: ToDo,
-      link: "",
-      sourceCode : "https://github.com/Padmakumar18/To-Do-list-chrome-extension"
-    },
-    {
-      title: "Chrome Extension",
-      name: "Dictionary-Extension",
-      img: DictionaryExtension,
-      link: "",
-      sourceCode : "https://github.com/Padmakumar18/Dictionary-Extension"
+      title: "Web Application",
+      name: "Finance Manager",
+      img: Finance,
+      link: "https://my-financely.netlify.app/",
+      sourceCode : "https://github.com/Padmakumar18/Personal_Finance_Manager"
     },
     {
       title: "Web Application",
@@ -40,6 +27,12 @@ const Projects = () => {
       img: Flames,
       link: "https://flames-algorithm.netlify.app/",
       sourceCode : "https://github.com/Padmakumar18/Flames_web"
+    },{
+      title: "Web Application",
+      name: "Chat Application",
+      img: ChatApp,
+      link: "https://github.com/Padmakumar18/Chat-Application/tree/main",
+      sourceCode : "https://github.com/Padmakumar18/Chat-Application/tree/main"
     },
     {
       title: "Web Application",
@@ -60,7 +53,28 @@ const Projects = () => {
       name: "To Do List",
       img: ToDoList,
       link: "https://todo-ease.web.app",
-      sourceCode : "https://github.com/Padmakumar18/To-do/tree/main/to-dok"
+      sourceCode : "https://github.com/Padmakumar18/To-do/tree/main/to-do"
+    },
+    {
+      title: "Chrome Extension",
+      name: "YT Bookmark",
+      img: YT,
+      link: "https://github.com/Padmakumar18/YT-Bookmark",
+      sourceCode : "https://github.com/Padmakumar18/YT-Bookmark"
+    },
+    {
+      title: "Chrome Extension",
+      name: "TO-Do List",
+      img: ToDo,
+      link: "https://github.com/Padmakumar18/To-Do-list-chrome-extension",
+      sourceCode : "https://github.com/Padmakumar18/To-Do-list-chrome-extension"
+    },
+    {
+      title: "Chrome Extension",
+      name: "Dictionary-Extension",
+      img: DictionaryExtension,
+      link: "https://github.com/Padmakumar18/Dictionary-Extension",
+      sourceCode : "https://github.com/Padmakumar18/Dictionary-Extension"
     },
     {
       title: "Console Application",
@@ -70,19 +84,12 @@ const Projects = () => {
       sourceCode : "https://github.com/Padmakumar18/Employee-Management"
     },
     {
-      title: "Web Application",
-      name: "Chat Application",
-      img: ChatApp,
-      link: "https://github.com/Padmakumar18/Chat-Application/tree/main",
-      sourceCode : "https://github.com/Padmakumar18/Chat-Application/tree/main"
-    },
-    {
       title: "Console Application",
       name: "Email Application",
       img: Github,
       link: "https://github.com/Padmakumar18/EmailApp",
       sourceCode : "https://github.com/Padmakumar18/EmailApp"
-    },
+    }
   ];
 
   return (
