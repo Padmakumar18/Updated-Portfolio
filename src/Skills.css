@@ -1,117 +1,93 @@
 .skills {
   width: 100%;
   padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .skillsList {
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
-  /* text-align: center; */
+}
+
+.skillsList p {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .skill {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start; /* Align items to the left */
   gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
-  height: fit-content;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Align content inside li to the left */
   align-items: center;
-  padding: 0.3em 0.7em;
+  padding: 0.5em 1em;
   gap: 8px;
-  border-radius: 0.3em;
-  transition: transform 0.3s ease, background-color 0.3s ease,
-    box-shadow 0.3s ease;
+  border-radius: 0.4em;
   background-color: rgb(20, 45, 60);
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  width: fit-content;
 }
 
 li:hover {
-  transform: scale(1.1);
-}
-
-
-@media (max-width: 768px) {
-  .skill {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  li {
-    width: 10em;
-  }
-}
-
-@media (max-width: 480px) {
-  .skills {
-    padding: 1rem;
-  }
-  
-  .skillsList {
-    width: 100%;
-  }
-
-  li {
-    width: 100%;
-  }
+  transform: scale(1.05);
 }
 
 .mavenLogo,
 .hibernate,
 .mysql,
-.Postman ,
-.notion{
+.Postman,
+.notion {
   width: 2em;
   height: 2em;
 }
 
+/* Tablet View */
+@media (max-width: 768px) {
+  .skill {
+    justify-content: flex-start; /* Maintain left alignment */
+  }
 
-/* import './Skills.css'
-import Postman from "./assets/Postman.webp";
+  li {
+    min-width: 8em;
+    padding: 0.5em 0.8em;
+  }
+}
 
-export default function Skills() {
-    return (
-        <>
-        <div className="skills flex items-center justify-center">
-          <div className="skillsList">
-            <p className="font-bold text-2xl mb-10 flex items-center justify-center">
-              SKILLS
-            </p>
-            <ul>
-            <p className='text-lg mb-2'>Frontend</p>
-              <div className="skill">
-              <li>SKILLS</li>
-              <li>SKILLS</li>
-              <li>SKILLS</li>
-              </div>
-            <p className='text-lg mb-2'>Backend</p>
-              <div className="skill">
-              <li>SKILLS</li>
-              <li>SKILLS</li>
-              <li>SKILLS</li>
-              </div>
-            <p className='text-lg mb-2'>DB</p>
-              <div className="skill">
-              <li>SKILLS</li>
-              <li>SKILLS</li>
-              <li>SKILLS</li>
-              </div>
-            <p className='text-lg mb-2'>CLOUD</p>
-              <div className="skill">
-              <li>SKILLS</li>
-              <li>SKILLS</li>
-              <li>SKILLS</li>
-              </div>
-            </ul>
-          </div>
-        </div>
-        </>
-    )
-} */
+/* Mobile View */
+@media (max-width: 480px) {
+  .skills {
+    padding: 1rem 0.5rem;
+  }
+
+  .skill {
+    flex-direction: column;
+    align-items: flex-start; /* Keep items aligned to left in vertical stack */
+  }
+
+  li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .skillsList p {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+}
