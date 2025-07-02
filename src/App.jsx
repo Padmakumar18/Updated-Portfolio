@@ -11,7 +11,6 @@ import Experience from "./Experience";
 import Background from "./Background";
 import Contact from "./Contact";
 import Profile from "./Profile";
-import Loading from "./Loading";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,22 +41,92 @@ const NavBar = () => {
             </button>
           </div>
           <ul className="hidden md:flex space-x-6">
-            <li className="nav-li"><button className="text-black" onClick={() => scrollToSection("home")}>Home</button></li>
-            <li className="nav-li"><button className="text-black" onClick={() => scrollToSection("contact")}>Contact</button></li>
-            <li className="nav-li"><button className="text-black" onClick={() => scrollToSection("projects")}>Projects</button></li>
-            <li className="nav-li"><button className="text-black" onClick={() => scrollToSection("experience")}>Experience</button></li>
-            <li className="nav-li"><button className="text-black" onClick={() => scrollToSection("skills")}>Skills</button></li>
+            <li className="nav-li">
+              <button
+                className="text-black"
+                onClick={() => scrollToSection("home")}
+              >
+                Home
+              </button>
+            </li>
+            <li className="nav-li">
+              <button
+                className="text-black"
+                onClick={() => scrollToSection("contact")}
+              >
+                Contact
+              </button>
+            </li>
+            <li className="nav-li">
+              <button
+                className="text-black"
+                onClick={() => scrollToSection("projects")}
+              >
+                Projects
+              </button>
+            </li>
+            <li className="nav-li">
+              <button
+                className="text-black"
+                onClick={() => scrollToSection("experience")}
+              >
+                Experience
+              </button>
+            </li>
+            <li className="nav-li">
+              <button
+                className="text-black"
+                onClick={() => scrollToSection("skills")}
+              >
+                Skills
+              </button>
+            </li>
           </ul>
         </div>
       </div>
       {isMobileMenuOpen && (
         <div className="md:hidden text-center py-4">
           <ul className="flex flex-col space-y-4">
-            <li className="nav-li"><button className="text-black"  onClick={() => scrollToSection("home")}>Home</button></li>
-            <li className="nav-li"><button className="text-black"  onClick={() => scrollToSection("contact")}>Contact</button></li>
-            <li className="nav-li"><button className="text-black"  onClick={() => scrollToSection("projects")}>Projects</button></li>
-            <li className="nav-li"><button className="text-black"  onClick={() => scrollToSection("experience")}>Experience</button></li>
-            <li className="nav-li"  ><button className="text-black"  onClick={() => scrollToSection("skills")}>Skills</button></li>
+            <li className="nav-li">
+              <button
+                className="text-black"
+                onClick={() => scrollToSection("home")}
+              >
+                Home
+              </button>
+            </li>
+            <li className="nav-li">
+              <button
+                className="text-black"
+                onClick={() => scrollToSection("contact")}
+              >
+                Contact
+              </button>
+            </li>
+            <li className="nav-li">
+              <button
+                className="text-black"
+                onClick={() => scrollToSection("projects")}
+              >
+                Projects
+              </button>
+            </li>
+            <li className="nav-li">
+              <button
+                className="text-black"
+                onClick={() => scrollToSection("experience")}
+              >
+                Experience
+              </button>
+            </li>
+            <li className="nav-li">
+              <button
+                className="text-black"
+                onClick={() => scrollToSection("skills")}
+              >
+                Skills
+              </button>
+            </li>
           </ul>
         </div>
       )}
@@ -81,48 +150,39 @@ const FadeUpSection = ({ children, id }) => {
 };
 
 function App() {
-  const [loadPage, setLoadPage] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoadPage(false);
-    }, 2000);
-  }, []);
-
   return (
     <>
-      {loadPage ? (
+      {/* {false ? (
         <div className="Loading">
           <Loading />
         </div>
       ) : (
-        <>
-          <NavBar />
-          <Background />
-          <div className="main w-screen mt-16 px-4 sm:px-6 lg:px-8">
-            <FadeUpSection id="home">
-              <Profile />
-            </FadeUpSection>
+        <> */}
+      <NavBar />
+      <Background />
+      <div className="main w-screen mt-16 px-4 sm:px-6 lg:px-8">
+        <FadeUpSection id="home">
+          <Profile />
+        </FadeUpSection>
 
-            <FadeUpSection id="skills">
-              <Skills />
-            </FadeUpSection>
+        <FadeUpSection id="skills">
+          <Skills />
+        </FadeUpSection>
 
-            <FadeUpSection id="experience">
-              <Experience />
-            </FadeUpSection>
+        <FadeUpSection id="experience">
+          <Experience />
+        </FadeUpSection>
 
-            <FadeUpSection id="projects">
-              <Projects />
-            </FadeUpSection>
-            
-            <FadeUpSection id="contact">
-            </FadeUpSection>
-            <Contact />
-          </div>
-        </>
-      )}
+        <FadeUpSection id="projects">
+          <Projects />
+        </FadeUpSection>
+
+        <FadeUpSection id="contact"></FadeUpSection>
+        <Contact />
+      </div>
     </>
+    //   )}
+    // </>
   );
 }
 
