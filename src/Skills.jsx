@@ -96,7 +96,7 @@ export default function Skills() {
                 </svg>{" "}
                 Tailwind
               </li>
-              <li>
+              {/* <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -111,16 +111,9 @@ export default function Skills() {
                   ></path>
                 </svg>{" "}
                 Saas
-              </li>
+              </li> */}
               <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 48 48"
-                >
+                <svg x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
                   <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
                   <path
                     fill="#000001"
