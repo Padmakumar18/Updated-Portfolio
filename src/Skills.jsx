@@ -1,6 +1,9 @@
 import "./Skills.css";
 import Postman from "./assets/Postman.webp";
 import Notion from "./assets/Notion.webp";
+import AndroidStudio from "./assets/android-studio-icon.webp";
+import Golang from "./assets/go-programming-language-icon.webp";
+import n8n from "./assets/n8n-color.webp";
 
 export default function Skills() {
   return (
@@ -123,6 +126,91 @@ export default function Skills() {
                 Javascript
               </li>
               <li>
+                <img
+                  src={Golang}
+                  className="golang"
+                  style={{ width: "2em" }}
+                  alt=""
+                />
+                Golang
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#1565c0"
+                    d="M10,12l3,25l-8.019-8.019c-1.189-1.189-1.508-2.996-0.796-4.52L10,12z"
+                  ></path>
+                  <path
+                    fill="#42a5f5"
+                    d="M27.319,6.319C26.474,5.474,25.329,5,24.135,5c-0.745,0-1.479,0.185-2.135,0.538L10,12v20.343 c0,1.061,0.421,2.078,1.172,2.828L13,37h22v-5l7-11L27.319,6.319z"
+                  ></path>
+                  <path
+                    fill="#1565c0"
+                    d="M10,12h21.343c1.061,0,2.078,0.421,2.828,1.172L42,21v16h-7L10,12z"
+                  ></path>
+                  <polygon
+                    fill="#85cbf8"
+                    points="35,37 13,37 19,43 35,43"
+                  ></polygon>
+                </svg>{" "}
+                Dart
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 48 48"
+                >
+                  <linearGradient
+                    id="gFTOxFpGMtrTwKmyJmDVma_pCvIfmctRaY8_gr1"
+                    x1="34.31"
+                    x2="21.223"
+                    y1="47.31"
+                    y2="34.223"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0" stop-color="#0176d0"></stop>
+                    <stop offset=".454" stop-color="#0275ce"></stop>
+                    <stop offset=".617" stop-color="#0472c7"></stop>
+                    <stop offset=".733" stop-color="#076bbc"></stop>
+                    <stop offset=".827" stop-color="#0d63ab"></stop>
+                    <stop offset=".907" stop-color="#135895"></stop>
+                    <stop offset=".933" stop-color="#16538c"></stop>
+                  </linearGradient>
+                  <polygon
+                    fill="url(#gFTOxFpGMtrTwKmyJmDVma_pCvIfmctRaY8_gr1)"
+                    points="37,44 25,44 14,33 20,27"
+                  ></polygon>
+                  <polygon
+                    fill="#50e6ff"
+                    points="5,24 25,4 37,4 11,30"
+                  ></polygon>
+                  <polygon
+                    fill="#50e6ff"
+                    points="37,22 20,39 14,33 25,22"
+                  ></polygon>
+                  <rect
+                    width="8.485"
+                    height="8.485"
+                    x="15.757"
+                    y="28.757"
+                    fill="#35c1f1"
+                    transform="rotate(-45.001 20 33)"
+                  ></rect>
+                </svg>{" "}
+                Flutter
+              </li>
+              <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -221,7 +309,7 @@ export default function Skills() {
                 </svg>{" "}
                 Java
               </li>
-              <li>
+              {/* <li>
                 <img
                   src="https://icon.icepanel.io/Technology/svg/Apache-Maven.svg"
                   className="mavenLogo"
@@ -234,8 +322,66 @@ export default function Skills() {
                   className="hibernate"
                 />{" "}
                 Hibernate
+                </li> */}
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  preserveAspectRatio="xMinYMin meet"
+                  viewBox="0 0 256 255"
+                  id="python"
+                >
+                  <defs>
+                    <linearGradient
+                      id="a"
+                      x1="12.959%"
+                      x2="79.639%"
+                      y1="12.039%"
+                      y2="78.201%"
+                    >
+                      <stop offset="0%" stop-color="#387EB8"></stop>
+                      <stop offset="100%" stop-color="#366994"></stop>
+                    </linearGradient>
+                    <linearGradient
+                      id="b"
+                      x1="19.128%"
+                      x2="90.742%"
+                      y1="20.579%"
+                      y2="88.429%"
+                    >
+                      <stop offset="0%" stop-color="#FFE052"></stop>
+                      <stop offset="100%" stop-color="#FFC331"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path
+                    fill="url(#a)"
+                    d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13 11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.13z"
+                  ></path>
+                  <path
+                    fill="url(#b)"
+                    d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.131 11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13z"
+                  ></path>
+                </svg>{" "}
+                Python
               </li>
               <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  preserveAspectRatio="xMinYMin meet"
+                  viewBox="0 0 256 326"
+                  id="django"
+                >
+                  <g fill="#2BA977">
+                    <path d="M114.784 0h53.278v244.191c-27.29 5.162-47.38 7.193-69.117 7.193C33.873 251.316 0 222.245 0 166.412c0-53.795 35.93-88.708 91.608-88.708 8.64 0 15.222.68 23.176 2.717V0zm1.867 124.427c-6.24-2.038-11.382-2.717-17.965-2.717-26.947 0-42.512 16.437-42.512 45.243 0 28.046 14.88 43.532 42.17 43.532 5.896 0 10.696-.332 18.307-1.351v-84.707z"></path>
+                    <path d="M255.187 84.26v122.263c0 42.105-3.154 62.353-12.411 79.81-8.64 16.783-20.022 27.366-43.541 39.055l-49.438-23.297c23.519-10.93 34.901-20.588 42.17-35.327 7.61-15.072 10.01-32.529 10.01-78.445V84.261h53.21zM196.608 0h53.278v54.135h-53.278V0z"></path>
+                  </g>
+                </svg>{" "}
+                Django
+              </li>
+              {/* <li>
                 {" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -254,9 +400,9 @@ export default function Skills() {
                     d="M39.385 32.558c-3.123 4.302-8.651 4.533-13.854 4.442H18.75h-1.938c4.428-1.593 7.063-1.972 9.754-3.4 5.068-2.665 10.078-8.496 11.121-14.562-1.93 5.836-7.779 10.85-13.109 12.889-3.652 1.393-10.248 2.745-10.248 2.745l-.267-.145C9.573 32.268 9.437 22.214 17.6 18.968c3.574-1.423 6.993-.641 10.854-1.593 4.122-1.012 8.89-4.208 10.83-8.375C41.456 15.667 44.07 26.106 39.385 32.558L39.385 32.558zM15.668 38.445C15.386 38.795 14.955 39 14.505 39c-.823 0-1.495-.677-1.495-1.5s.677-1.5 1.495-1.5c.341 0 .677.118.941.336C16.086 36.855 16.186 37.805 15.668 38.445L15.668 38.445z"
                   ></path>
                 </svg>{" "}
-                Spring
-              </li>
-              <li>
+                Spring Boot
+              </li> */}
+              {/* <li>
                 {" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -308,7 +454,7 @@ export default function Skills() {
                   ></path>
                 </svg>
                 Docker
-              </li>
+              </li> */}
             </div>
             <p className="text-lg  mt-3 mb-2">Databases</p>
             <div className="skill mb-10">
@@ -387,19 +533,6 @@ export default function Skills() {
                   y="0px"
                   width="30"
                   height="30"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6c0-0.4,0-0.9,0.2-1.3 C7.2,6.1,7.4,6,7.5,6c0,0,0.1,0,0.1,0C8.1,6.1,9.1,6.4,10,7.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3c0.9-0.9,2-1.2,2.5-1.3 c0,0,0.1,0,0.1,0c0.2,0,0.3,0.1,0.4,0.3C17,6.7,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4 c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3C22,6.1,16.9,1.4,10.9,2.1z"></path>
-                </svg>{" "}
-                Github
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="30"
-                  height="30"
                   viewBox="0 0 48 48"
                 >
                   <path
@@ -421,6 +554,18 @@ export default function Skills() {
                   <circle cx="32" cy="24" r="7" fill="#29b6f6"></circle>
                 </svg>{" "}
                 Figma
+              </li>
+              <li>
+                <img
+                  src={AndroidStudio}
+                  alt="Android Studio"
+                  style={{ width: "2em" }}
+                />
+                Android Studio
+              </li>
+              <li>
+                <img src={n8n} alt="Android Studio" style={{ width: "2em" }} />
+                n8n
               </li>
               <li>
                 <svg
@@ -465,6 +610,30 @@ export default function Skills() {
                   </g>
                 </svg>{" "}
                 Supabase
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#29b6f6"
+                    d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z"
+                  ></path>
+                  <path
+                    fill="#0277bd"
+                    d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z"
+                  ></path>
+                  <path
+                    fill="#0288d1"
+                    d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z"
+                  ></path>
+                </svg>{" "}
+                VS Code
               </li>
               <li>
                 <svg
