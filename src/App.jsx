@@ -11,6 +11,7 @@ import Experience from "./Experience";
 import Background from "./Background";
 import Contact from "./Contact";
 import Profile from "./Profile";
+import PlatformsProfile from "./PlatformsProfile";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -168,6 +169,9 @@ function App() {
         <FadeUpSection id="skills">
           <Skills />
         </FadeUpSection>
+
+        <FadeUpSection id="leetcode"></FadeUpSection>
+        <PlatformsProfile />
 
         <FadeUpSection id="experience">
           <Experience />
