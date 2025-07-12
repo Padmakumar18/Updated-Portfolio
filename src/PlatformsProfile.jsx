@@ -3,7 +3,7 @@ import GitHubCalendar from "react-github-calendar";
 export default function PlatformsProfile() {
   return (
     <div className="px-4 py-8 max-w-7xl mx-auto">
-      <p className="font-bold text-white text-2xl mb-10 flex items-center justify-center">
+      <p className="font-bold text-2xl mb-10 flex items-center justify-center">
         Code Activity Dashboard
       </p>
 

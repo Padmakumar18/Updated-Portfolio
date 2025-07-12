@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <>
       <div className="Contact mt-20 mb-10">
-        <p className="font-bold text-3xl mb-10 flex items-center justify-center">
+        <p className="font-bold text-white text-3xl mb-10 flex items-center justify-center">
           PROFILES
         </p>
         <div className="contacts flex justify-center gap-6">
