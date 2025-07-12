@@ -3,7 +3,7 @@ import GitHubCalendar from "react-github-calendar";
 export default function PlatformsProfile() {
   return (
     <div className="px-4 py-8 max-w-7xl mx-auto">
-      <p className="font-bold text-2xl mb-10 flex items-center justify-center">
+      <p className="font-bold text-white text-2xl mb-10 flex items-center justify-center">
         Code Activity Dashboard
       </p>
 
@@ -36,17 +36,16 @@ export default function PlatformsProfile() {
         />
       </div>
 
-      <div className=" rounded-xl shadow p-6">
-        <h2 className="text-2xl font-bold text-center  mb-4">
-          GitHub Contributions
-        </h2>
-        <div className="flex justify-center">
+      <div className="flex justify-center">
+        <div className="w-full bg-white dark:bg-black rounded-2xl shadow-xl p-6 transition-all duration-300 hover:shadow-2xl">
+          <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-white mb-4">
+            GitHub Contribution Heatmap
+          </h2>
           <GitHubCalendar
             username="Padmakumar18"
             blockSize={15}
             blockMargin={5}
             fontSize={16}
-            // colorScheme="dark"
           />
         </div>
       </div>

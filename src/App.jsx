@@ -170,8 +170,9 @@ function App() {
           <Skills />
         </FadeUpSection>
 
-        <FadeUpSection id="leetcode"></FadeUpSection>
-        <PlatformsProfile />
+        <FadeUpSection id="platformsprofile">
+          <PlatformsProfile />
+        </FadeUpSection>
 
         <FadeUpSection id="experience">
           <Experience />
